@@ -8,7 +8,7 @@ export function Footer() {
           {/* Brand Column */}
           <div>
             <div className="mb-4">
-              <Logo className="h-8" />
+              <Logo className="h-12" />
             </div>
             <p className="text-sm text-gray-400 leading-relaxed">
               Tools that power tomorrow's professionals.

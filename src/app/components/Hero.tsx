@@ -1,7 +1,8 @@
-import { ArrowRight, Lock, Activity, Code, Play, StickyNote } from 'lucide-react';
+import { ArrowRight, Activity, Code, Play, StickyNote } from 'lucide-react';
 import { Button } from '@/app/components/ui/button';
 import stickyNotezLogo from '@/assets/stickynotez-logo.svg';
 import logAndLockLogo from '@/assets/logandlock-logo.svg';
+import logAndLockIcon from '@/assets/logandlock-icon.svg';
 
 interface HeroProps {
   onExploreProducts?: () => void;
@@ -139,7 +140,7 @@ export function Hero({ onExploreProducts, onWatchDemo }: HeroProps) {
                 <div className="bg-zinc-950/50 border border-orange-600/10 rounded-xl p-5 opacity-75 hover:opacity-90 hover:border-orange-600/25 transition-all duration-300">
                   <div className="flex items-start gap-4">
                     <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-orange-600/30 to-red-600/30 flex items-center justify-center flex-shrink-0">
-                      <Lock className="text-gray-400" size={20} />
+                      <img src={logAndLockIcon} alt="" className="w-5 h-5 opacity-80" />
                     </div>
                     <div className="flex-1">
                       <div className="flex items-center gap-2 mb-1">

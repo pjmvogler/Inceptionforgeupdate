@@ -4,11 +4,11 @@ import logoImage from '@/assets/4ce70965a299d887c6cc6e8ae77b9b0e9edc7c68.png';
 
 export function Logo({ className }: { className?: string }) {
   return (
-    <div className={`flex items-center ${className ?? ''}`.trim()}>
+    <div className={`flex items-center ${className ?? 'h-10'}`.trim()}>
       <img
         src={logoImage}
         alt="Inception Forge"
-        className="h-[79px] w-auto"
+        className="h-full w-auto"
         style={{
           filter: 'brightness(1.5) saturate(1.3)',
         }}

@@ -1,7 +1,6 @@
 import { Navigation } from '@/app/components/Navigation';
 import { Hero } from '@/app/components/Hero';
 import { Products } from '@/app/components/Products';
-import { Solutions } from '@/app/components/Solutions';
 import { WhyInceptionForge } from '@/app/components/WhyInceptionForge';
 import { About } from '@/app/components/About';
 import { CTA } from '@/app/components/CTA';
@@ -47,7 +46,6 @@ export default function App() {
       <Navigation onNavigate={setCurrentPage} currentPage={currentPage} />
       <Hero onExploreProducts={handleExploreProducts} onWatchDemo={handleWatchDemo} />
       <Products onNavigate={setCurrentPage} />
-      <Solutions />
       <WhyInceptionForge />
       <About />
       <CTA />

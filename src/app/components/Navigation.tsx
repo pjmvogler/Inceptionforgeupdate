@@ -40,20 +40,6 @@ export function Navigation({ onNavigate, currentPage = 'home' }: NavigationProps
     }
   };
 
-  const handleSolutionsClick = (e: React.MouseEvent) => {
-    e.preventDefault();
-    if (currentPage === 'home') {
-      const solutionsSection = document.getElementById('solutions');
-      solutionsSection?.scrollIntoView({ behavior: 'smooth' });
-    } else if (onNavigate) {
-      onNavigate('home');
-      setTimeout(() => {
-        const solutionsSection = document.getElementById('solutions');
-        solutionsSection?.scrollIntoView({ behavior: 'smooth' });
-      }, 100);
-    }
-  };
-
   const handleAboutClick = (e: React.MouseEvent) => {
     e.preventDefault();
     if (currentPage === 'home') {
@@ -102,13 +88,7 @@ export function Navigation({ onNavigate, currentPage = 'home' }: NavigationProps
             >
               Products
             </button>
-            <button 
-              onClick={handleSolutionsClick}
-              className="text-sm text-gray-300 hover:text-white transition-colors"
-            >
-              Solutions
-            </button>
-            <button 
+            <button
               onClick={handleAboutClick}
               className="text-sm text-gray-300 hover:text-white transition-colors"
             >
