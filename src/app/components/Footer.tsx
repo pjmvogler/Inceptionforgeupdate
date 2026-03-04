@@ -44,11 +44,6 @@ export function Footer() {
                   Contact
                 </a>
               </li>
-              <li>
-                <a href="#" className="text-sm text-gray-400 hover:text-orange-500 transition-colors">
-                  Careers
-                </a>
-              </li>
             </ul>
           </div>
 
