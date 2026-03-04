@@ -55,16 +55,6 @@ export function Footer({ onNavigate }: FooterProps) {
                   Contact
                 </button>
               </li>
-              <li>
-                <a href="tel:563-570-3339" className="text-sm text-gray-400 hover:text-orange-500 transition-colors">
-                  (563) 570-3339
-                </a>
-              </li>
-              <li>
-                <a href="mailto:admin@inceptionforge.com" className="text-sm text-gray-400 hover:text-orange-500 transition-colors">
-                  admin@inceptionforge.com
-                </a>
-              </li>
             </ul>
           </div>
 
