@@ -87,8 +87,8 @@ export function Products({ onNavigate }: ProductsProps) {
             </div>
 
             <div className="mb-6">
-              <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-orange-600/30 to-red-600/30 flex items-center justify-center mb-4">
-                <img src={logAndLockIcon} alt="" className="w-6 h-6 opacity-80" />
+              <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-purple-600/40 to-violet-600/40 flex items-center justify-center mb-4">
+                <img src={logAndLockIcon} alt="" className="w-8 h-8" />
               </div>
               <img src={logAndLockLogo} alt="Log & Lock" className="h-7 mb-2 opacity-70" />
               <p className="text-gray-600 text-sm leading-relaxed mb-4">

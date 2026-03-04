@@ -139,8 +139,8 @@ export function Hero({ onExploreProducts, onWatchDemo }: HeroProps) {
                 {/* Log & Lock - Coming Soon */}
                 <div className="bg-zinc-950/50 border border-orange-600/10 rounded-xl p-5 opacity-75 hover:opacity-90 hover:border-orange-600/25 transition-all duration-300">
                   <div className="flex items-start gap-4">
-                    <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-orange-600/30 to-red-600/30 flex items-center justify-center flex-shrink-0">
-                      <img src={logAndLockIcon} alt="" className="w-5 h-5 opacity-80" />
+                    <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-purple-600/40 to-violet-600/40 flex items-center justify-center flex-shrink-0">
+                      <img src={logAndLockIcon} alt="" className="w-7 h-7" />
                     </div>
                     <div className="flex-1">
                       <div className="flex items-center gap-2 mb-1">
