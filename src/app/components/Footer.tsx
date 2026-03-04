@@ -14,12 +14,12 @@ export function Footer({ onNavigate }: FooterProps) {
 
   return (
     <footer id="contact" className="relative bg-black border-t border-white/5">
-      <div className="max-w-7xl mx-auto px-6 lg:px-8 py-16">
-        <div className="grid md:grid-cols-4 gap-12 mb-12">
+      <div className="max-w-7xl mx-auto px-4 md:px-6 lg:px-8 py-10 md:py-16">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12 mb-10 md:mb-12">
           {/* Brand Column */}
-          <div>
+          <div className="col-span-2 md:col-span-1">
             <div className="mb-4">
-              <Logo className="h-12" />
+              <Logo className="h-10 md:h-12" />
             </div>
             <p className="text-sm text-gray-400 leading-relaxed">
               Tools that power tomorrow's professionals.

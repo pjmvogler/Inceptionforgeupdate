@@ -13,7 +13,7 @@ export function Products({ onNavigate }: ProductsProps) {
   // Removed unused handleViewProduct function since we're linking directly to logandlock.com
 
   return (
-    <section id="products" className="relative py-32 bg-black border-t border-white/5">
+    <section id="products" className="relative py-16 md:py-32 bg-black border-t border-white/5">
       {/* Subtle background grain */}
       <div 
         className="absolute inset-0 pointer-events-none opacity-[0.02]"
@@ -24,17 +24,17 @@ export function Products({ onNavigate }: ProductsProps) {
         }}
       ></div>
 
-      <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8">
+      <div className="relative z-10 max-w-7xl mx-auto px-4 md:px-6 lg:px-8">
         {/* Section Header */}
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">Products</h2>
+        <div className="text-center mb-10 md:mb-16">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-3 md:mb-4">Products</h2>
           <p className="text-gray-400 text-lg">Smart tools built for real work.</p>
         </div>
 
         {/* Product Grid */}
-        <div className="grid md:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-3 gap-5 md:gap-8">
           {/* Sticky Notez - Active Product */}
-          <div className="bg-gradient-to-br from-zinc-900 to-zinc-950 border-2 border-yellow-500/30 rounded-2xl p-8 relative overflow-hidden group hover:border-yellow-500/50 transition-all shadow-lg shadow-yellow-500/5">
+          <div className="bg-gradient-to-br from-zinc-900 to-zinc-950 border-2 border-yellow-500/30 rounded-2xl p-6 md:p-8 relative overflow-hidden group hover:border-yellow-500/50 transition-all shadow-lg shadow-yellow-500/5">
             {/* New badge */}
             <div className="absolute top-4 right-4">
               <div className="px-2 py-1 rounded-md bg-yellow-500/20 border border-yellow-500/30">
@@ -80,7 +80,7 @@ export function Products({ onNavigate }: ProductsProps) {
           </div>
 
           {/* Log & Lock - Coming Soon */}
-          <div className="bg-zinc-950 border border-orange-600/10 rounded-2xl p-8 relative overflow-hidden opacity-75 hover:opacity-90 hover:border-orange-600/25 transition-all duration-300">
+          <div className="bg-zinc-950 border border-orange-600/10 rounded-2xl p-6 md:p-8 relative overflow-hidden opacity-75 hover:opacity-90 hover:border-orange-600/25 transition-all duration-300">
             <div className="absolute top-4 right-4">
               <div className="px-2 py-1 rounded-md bg-white/5 border border-white/10">
                 <span className="text-xs font-medium text-gray-500">COMING SOON</span>

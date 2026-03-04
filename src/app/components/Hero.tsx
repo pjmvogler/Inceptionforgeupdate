@@ -65,21 +65,21 @@ export function Hero({ onExploreProducts }: HeroProps) {
         }}
       ></div>
 
-      <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8 pt-28 pb-20">
-        <div className="grid lg:grid-cols-2 gap-16 items-center">
+      <div className="relative z-10 max-w-7xl mx-auto px-4 md:px-6 lg:px-8 pt-20 md:pt-28 pb-12 md:pb-20">
+        <div className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
           {/* Left Column: Hero Content */}
           <div>
-            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight mb-6 leading-[1.1]">
+            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight mb-5 md:mb-6 leading-[1.1]">
               <span className="bg-gradient-to-r from-orange-500 via-orange-600 to-red-600 bg-clip-text text-transparent">
                 FORGE THE FUTURE
               </span>
             </h1>
             
-            <p className="text-xl md:text-2xl text-gray-100 mb-4 leading-[1.45]">
+            <p className="text-lg md:text-xl lg:text-2xl text-gray-100 mb-4 leading-[1.45]">
               A studio building intelligent SaaS tools that transform how professionals work across every industry.
             </p>
             
-            <p className="text-base text-gray-300 mb-10 leading-[1.75] max-w-lg">
+            <p className="text-sm md:text-base text-gray-300 mb-8 md:mb-10 leading-[1.75] max-w-lg">
               From note-taking and documentation to reporting and workflow automation, we craft software that saves hours, not minutes. Each tool is built to work independently or as part of a connected ecosystem.
             </p>
 
@@ -94,7 +94,7 @@ export function Hero({ onExploreProducts }: HeroProps) {
 
           {/* Right Column: Product Slate Card */}
           <div className="relative">
-            <div className="bg-gradient-to-br from-zinc-900/80 to-zinc-950/90 border border-white/10 rounded-2xl p-8 shadow-xl backdrop-blur-sm">
+            <div className="bg-gradient-to-br from-zinc-900/80 to-zinc-950/90 border border-white/10 rounded-2xl p-5 md:p-8 shadow-xl backdrop-blur-sm">
               <div className="mb-6">
                 <h3 className="text-xl font-bold text-gray-200">Product Slate</h3>
               </div>

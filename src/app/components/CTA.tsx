@@ -3,7 +3,7 @@ import { Button } from '@/app/components/ui/button';
 
 export function CTA() {
   return (
-    <section className="relative py-32 bg-gradient-to-b from-black via-zinc-950 to-black overflow-hidden">
+    <section className="relative py-16 md:py-32 bg-gradient-to-b from-black via-zinc-950 to-black overflow-hidden">
       {/* Subtle glow effect - toned down */}
       <div className="absolute inset-0 flex items-center justify-center opacity-15">
         <div className="w-[800px] h-[400px] bg-orange-600 rounded-full filter blur-[150px]"></div>
@@ -19,15 +19,15 @@ export function CTA() {
         }}
       ></div>
 
-      <div className="relative z-10 max-w-4xl mx-auto px-6 lg:px-8 text-center">
-        <h2 className="text-4xl md:text-5xl font-bold mb-6 leading-tight">
+      <div className="relative z-10 max-w-4xl mx-auto px-4 md:px-6 lg:px-8 text-center">
+        <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-5 md:mb-6 leading-tight">
           Try Sticky Notez today.{' '}
           <span className="bg-gradient-to-r from-orange-500 via-orange-600 to-red-600 bg-clip-text text-transparent">
             More tools shipping soon.
           </span>
         </h2>
 
-        <p className="text-xl text-gray-300 mb-10 max-w-2xl mx-auto leading-relaxed">
+        <p className="text-base md:text-xl text-gray-300 mb-8 md:mb-10 max-w-2xl mx-auto leading-relaxed">
           Our first product is live and ready to help you organize your thoughts. Join early and grow with the studio.
         </p>
 

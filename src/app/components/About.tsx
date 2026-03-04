@@ -25,7 +25,7 @@ export function About() {
   ];
 
   return (
-    <section id="about" className="py-32 bg-gradient-to-b from-black via-zinc-950 to-black relative overflow-hidden border-t border-white/5">
+    <section id="about" className="py-16 md:py-32 bg-gradient-to-b from-black via-zinc-950 to-black relative overflow-hidden border-t border-white/5">
       {/* Grain texture */}
       <div
         className="absolute inset-0 pointer-events-none opacity-[0.02]"
@@ -36,30 +36,30 @@ export function About() {
         }}
       ></div>
 
-      <div className="relative z-10 max-w-6xl mx-auto px-6 lg:px-8">
+      <div className="relative z-10 max-w-6xl mx-auto px-4 md:px-6 lg:px-8">
         {/* Header */}
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">
+        <div className="text-center mb-10 md:mb-16">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-3 md:mb-4">
             <span className="bg-gradient-to-r from-orange-500 via-orange-600 to-red-600 bg-clip-text text-transparent">
               Software that makes work lighter.
             </span>
           </h2>
-          <p className="text-gray-400 text-lg max-w-2xl mx-auto">
+          <p className="text-gray-400 text-base md:text-lg max-w-2xl mx-auto">
             We're a product studio that ships practical SaaS tools that turn messy workflows into clear systems.
           </p>
         </div>
 
         {/* Pillars */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-20">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 mb-12 md:mb-20">
           {pillars.map((pillar, index) => (
             <div
               key={index}
-              className="bg-zinc-900/50 border border-white/5 rounded-xl p-6 hover:border-orange-600/30 transition-colors"
+              className="bg-zinc-900/50 border border-white/5 rounded-xl p-4 md:p-6 hover:border-orange-600/30 transition-colors"
             >
-              <div className="w-12 h-12 rounded-lg bg-gradient-to-br from-orange-600/20 to-red-600/20 border border-orange-600/20 flex items-center justify-center mb-4">
-                <pillar.icon className="text-orange-500" size={24} />
+              <div className="w-10 h-10 md:w-12 md:h-12 rounded-lg bg-gradient-to-br from-orange-600/20 to-red-600/20 border border-orange-600/20 flex items-center justify-center mb-3 md:mb-4">
+                <pillar.icon className="text-orange-500 w-5 h-5 md:w-6 md:h-6" />
               </div>
-              <h3 className="text-lg font-semibold mb-2">{pillar.title}</h3>
+              <h3 className="text-base md:text-lg font-semibold mb-1.5 md:mb-2">{pillar.title}</h3>
               <p className="text-sm text-gray-400 leading-relaxed">
                 {pillar.description}
               </p>
@@ -68,9 +68,9 @@ export function About() {
         </div>
 
         {/* Mission */}
-        <div className="text-center bg-gradient-to-br from-zinc-900/50 to-zinc-950/50 border border-white/10 rounded-2xl p-12">
-          <h3 className="text-3xl font-bold mb-4">Our mission</h3>
-          <p className="text-xl text-gray-300 max-w-2xl mx-auto leading-relaxed">
+        <div className="text-center bg-gradient-to-br from-zinc-900/50 to-zinc-950/50 border border-white/10 rounded-2xl p-8 md:p-12">
+          <h3 className="text-2xl md:text-3xl font-bold mb-3 md:mb-4">Our mission</h3>
+          <p className="text-lg md:text-xl text-gray-300 max-w-2xl mx-auto leading-relaxed">
             Remove friction so teams can focus on the work that matters.
           </p>
         </div>
