@@ -16,30 +16,30 @@ export function Hero({ onExploreProducts }: HeroProps) {
       {/* Professional gradient foundation */}
       <div className="absolute inset-0 bg-gradient-to-b from-black via-zinc-950 to-black"></div>
       
-      {/* Refined dual radial glows for depth */}
-      <div 
+      {/* Radial glows for depth */}
+      <div
         className="absolute pointer-events-none"
         style={{
-          top: '45%',
-          left: '30%',
+          top: '40%',
+          left: '25%',
           transform: 'translate(-50%, -50%)',
-          width: '900px',
-          height: '900px',
-          background: 'radial-gradient(circle, rgba(249, 115, 22, 0.08) 0%, rgba(234, 88, 12, 0.04) 40%, transparent 70%)',
-          filter: 'blur(80px)',
+          width: '800px',
+          height: '800px',
+          background: 'radial-gradient(circle, rgba(249, 115, 22, 0.18) 0%, rgba(234, 88, 12, 0.08) 40%, transparent 70%)',
+          filter: 'blur(60px)',
         }}
       ></div>
-      
-      <div 
+
+      <div
         className="absolute pointer-events-none"
         style={{
-          top: '55%',
-          right: '20%',
+          top: '60%',
+          right: '15%',
           transform: 'translate(50%, -50%)',
-          width: '700px',
-          height: '700px',
-          background: 'radial-gradient(circle, rgba(234, 88, 12, 0.06) 0%, rgba(194, 65, 12, 0.03) 40%, transparent 70%)',
-          filter: 'blur(90px)',
+          width: '600px',
+          height: '600px',
+          background: 'radial-gradient(circle, rgba(234, 88, 12, 0.14) 0%, rgba(194, 65, 12, 0.06) 40%, transparent 70%)',
+          filter: 'blur(50px)',
         }}
       ></div>
 
