@@ -2,8 +2,8 @@ import { Logo } from '@/app/components/Logo';
 import { ArrowRight } from 'lucide-react';
 
 interface NavigationProps {
-  onNavigate?: (page: 'home' | 'logandlock') => void;
-  currentPage?: 'home' | 'logandlock';
+  onNavigate?: (page: string) => void;
+  currentPage?: string;
 }
 
 export function Navigation({ onNavigate, currentPage = 'home' }: NavigationProps) {
@@ -54,17 +54,10 @@ export function Navigation({ onNavigate, currentPage = 'home' }: NavigationProps
     }
   };
 
-  const handleContactClick = (e: React.MouseEvent) => {
-    e.preventDefault();
-    if (currentPage === 'home') {
-      const contactSection = document.getElementById('contact');
-      contactSection?.scrollIntoView({ behavior: 'smooth' });
-    } else if (onNavigate) {
-      onNavigate('home');
-      setTimeout(() => {
-        const contactSection = document.getElementById('contact');
-        contactSection?.scrollIntoView({ behavior: 'smooth' });
-      }, 100);
+  const handleContactClick = () => {
+    if (onNavigate) {
+      onNavigate('contact');
+      window.scrollTo({ top: 0, behavior: 'smooth' });
     }
   };
 

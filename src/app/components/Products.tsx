@@ -1,11 +1,12 @@
-import { ArrowRight, Play, StickyNote } from 'lucide-react';
+import { ArrowRight, Play } from 'lucide-react';
 import { Button } from '@/app/components/ui/button';
 import stickyNotezLogo from '@/assets/stickynotez-logo.svg';
+import stickyNotezIcon from '@/assets/stickynotez-icon.svg';
 import logAndLockLogo from '@/assets/logandlock-logo.svg';
 import logAndLockIcon from '@/assets/logandlock-icon.svg';
 
 interface ProductsProps {
-  onNavigate?: (page: 'home' | 'logandlock') => void;
+  onNavigate?: (page: string) => void;
 }
 
 export function Products({ onNavigate }: ProductsProps) {
@@ -43,7 +44,7 @@ export function Products({ onNavigate }: ProductsProps) {
 
             <div className="mb-6">
               <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-yellow-400 to-amber-500 flex items-center justify-center mb-4 shadow-lg shadow-yellow-500/20">
-                <StickyNote className="text-white" size={24} />
+                <img src={stickyNotezIcon} alt="" className="w-7 h-7" />
               </div>
               <img src={stickyNotezLogo} alt="Sticky Notez" className="h-9 mb-4" />
               <p className="text-gray-400 text-sm leading-relaxed mb-4">

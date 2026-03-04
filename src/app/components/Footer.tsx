@@ -1,6 +1,17 @@
 import { Logo } from '@/app/components/Logo';
 
-export function Footer() {
+interface FooterProps {
+  onNavigate?: (page: string) => void;
+}
+
+export function Footer({ onNavigate }: FooterProps) {
+  const handleLegalClick = (page: string) => {
+    if (onNavigate) {
+      onNavigate(page);
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  };
+
   return (
     <footer id="contact" className="relative bg-black border-t border-white/5">
       <div className="max-w-7xl mx-auto px-6 lg:px-8 py-16">
@@ -40,8 +51,18 @@ export function Footer() {
                 </a>
               </li>
               <li>
-                <a href="#contact" className="text-sm text-gray-400 hover:text-orange-500 transition-colors">
+                <button type="button" onClick={() => handleLegalClick('contact')} className="text-sm text-gray-400 hover:text-orange-500 transition-colors">
                   Contact
+                </button>
+              </li>
+              <li>
+                <a href="tel:563-570-3339" className="text-sm text-gray-400 hover:text-orange-500 transition-colors">
+                  (563) 570-3339
+                </a>
+              </li>
+              <li>
+                <a href="mailto:admin@inceptionforge.com" className="text-sm text-gray-400 hover:text-orange-500 transition-colors">
+                  admin@inceptionforge.com
                 </a>
               </li>
             </ul>
@@ -52,19 +73,19 @@ export function Footer() {
             <h3 className="font-semibold mb-4 text-sm uppercase tracking-wider text-gray-300">Legal</h3>
             <ul className="space-y-3">
               <li>
-                <a href="#" className="text-sm text-gray-400 hover:text-orange-500 transition-colors">
+                <button type="button" onClick={() => handleLegalClick('privacy')} className="text-sm text-gray-400 hover:text-orange-500 transition-colors">
                   Privacy Policy
-                </a>
+                </button>
               </li>
               <li>
-                <a href="#" className="text-sm text-gray-400 hover:text-orange-500 transition-colors">
+                <button type="button" onClick={() => handleLegalClick('terms')} className="text-sm text-gray-400 hover:text-orange-500 transition-colors">
                   Terms of Service
-                </a>
+                </button>
               </li>
               <li>
-                <a href="#" className="text-sm text-gray-400 hover:text-orange-500 transition-colors">
+                <button type="button" onClick={() => handleLegalClick('security')} className="text-sm text-gray-400 hover:text-orange-500 transition-colors">
                   Security
-                </a>
+                </button>
               </li>
             </ul>
           </div>

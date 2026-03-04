@@ -1,16 +1,16 @@
-import { ArrowRight, Activity, Code, Play, StickyNote } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 import { Button } from '@/app/components/ui/button';
 import stickyNotezLogo from '@/assets/stickynotez-logo.svg';
+import stickyNotezIcon from '@/assets/stickynotez-icon.svg';
 import logAndLockLogo from '@/assets/logandlock-logo.svg';
 import logAndLockIcon from '@/assets/logandlock-icon.svg';
 
 interface HeroProps {
   onExploreProducts?: () => void;
-  onWatchDemo?: () => void;
 }
 
 
-export function Hero({ onExploreProducts, onWatchDemo }: HeroProps) {
+export function Hero({ onExploreProducts }: HeroProps) {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-black">
       {/* Professional gradient foundation */}
@@ -89,11 +89,6 @@ export function Hero({ onExploreProducts, onWatchDemo }: HeroProps) {
                 <span>Explore Products</span>
                 <ArrowRight className="w-[18px] h-[18px] group-hover:translate-x-1 transition-transform duration-300" />
               </button>
-              
-              <button type="button" onClick={onWatchDemo} className="h-12 px-8 rounded-lg border border-orange-600/40 bg-transparent text-orange-400 hover:bg-orange-600/10 hover:border-orange-600/70 font-medium transition-all duration-300 flex items-center justify-center gap-2">
-                <Play className="w-[18px] h-[18px]" />
-                <span>Watch Demo</span>
-              </button>
             </div>
           </div>
 
@@ -110,7 +105,7 @@ export function Hero({ onExploreProducts, onWatchDemo }: HeroProps) {
                 <div className="bg-gradient-to-br from-zinc-800/80 to-zinc-900/80 border-2 border-yellow-500/30 rounded-xl p-5 hover:border-yellow-500/50 transition-all group cursor-pointer">
                   <div className="flex items-start gap-4">
                     <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-yellow-400 to-amber-500 flex items-center justify-center flex-shrink-0 shadow-lg shadow-yellow-500/20">
-                      <StickyNote className="text-white" size={20} />
+                      <img src={stickyNotezIcon} alt="" className="w-6 h-6" />
                     </div>
                     <div className="flex-1 min-w-0">
                       <div className="flex items-center gap-2 mb-1">
