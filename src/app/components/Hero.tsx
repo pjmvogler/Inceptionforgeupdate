@@ -80,7 +80,7 @@ export function Hero({ onExploreProducts }: HeroProps) {
             </p>
             
             <p className="text-base text-gray-300 mb-10 leading-[1.75] max-w-lg">
-              From documentation and reporting to workflow automation and operations dashboards, we craft AI-powered software that saves hours, not minutes. Each tool is built to work independently or as part of a connected ecosystem.
+              From note-taking and documentation to reporting and workflow automation, we craft software that saves hours, not minutes. Each tool is built to work independently or as part of a connected ecosystem.
             </p>
 
             {/* CTA Buttons */}

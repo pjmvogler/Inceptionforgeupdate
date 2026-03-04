@@ -28,7 +28,7 @@ export function Products({ onNavigate }: ProductsProps) {
         {/* Section Header */}
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-4">Products</h2>
-          <p className="text-gray-400 text-lg">AI-powered tools built for real work.</p>
+          <p className="text-gray-400 text-lg">Smart tools built for real work.</p>
         </div>
 
         {/* Product Grid */}

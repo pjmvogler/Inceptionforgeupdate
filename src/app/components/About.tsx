@@ -5,7 +5,7 @@ export function About() {
     {
       icon: Workflow,
       title: 'Built for real workflows',
-      description: 'Designed around how professionals actually work — not theory.',
+      description: 'Designed around how professionals actually work, not theory.',
     },
     {
       icon: Zap,
@@ -45,7 +45,7 @@ export function About() {
             </span>
           </h2>
           <p className="text-gray-400 text-lg max-w-2xl mx-auto">
-            We're a product studio that ships practical SaaS tools — turning messy workflows into clear systems.
+            We're a product studio that ships practical SaaS tools that turn messy workflows into clear systems.
           </p>
         </div>
 
