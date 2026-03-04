@@ -21,26 +21,32 @@ export function CTA() {
 
       <div className="relative z-10 max-w-4xl mx-auto px-6 lg:px-8 text-center">
         <h2 className="text-4xl md:text-5xl font-bold mb-6 leading-tight">
-          Start with Log & Lock.{' '}
+          Try Sticky Notez today.{' '}
           <span className="bg-gradient-to-r from-orange-500 via-orange-600 to-red-600 bg-clip-text text-transparent">
             More tools shipping soon.
           </span>
         </h2>
-        
+
         <p className="text-xl text-gray-300 mb-10 max-w-2xl mx-auto leading-relaxed">
-          Our first product is live and ready to transform your documentation workflow. Join early and grow with the studio.
+          Our first product is live and ready to help you organize your thoughts. Join early and grow with the studio.
         </p>
 
-        <Button 
-          size="lg"
-          className="bg-gradient-to-r from-orange-600 via-orange-600 to-red-600 hover:from-orange-700 hover:via-orange-700 hover:to-red-700 text-white px-12 py-6 text-lg group shadow-lg shadow-orange-600/20"
+        <a
+          href="https://stickynotez.com"
+          target="_blank"
+          rel="noopener noreferrer"
         >
-          Get Started with Log & Lock
-          <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" size={20} />
-        </Button>
+          <Button
+            size="lg"
+            className="bg-gradient-to-r from-yellow-500 via-yellow-500 to-amber-500 hover:from-yellow-600 hover:via-yellow-600 hover:to-amber-600 text-black px-12 py-6 text-lg group shadow-lg shadow-yellow-500/20"
+          >
+            Try Sticky Notez
+            <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" size={20} />
+          </Button>
+        </a>
 
         <p className="text-sm text-gray-500 mt-6">
-          No credit card required • Start free
+          No account required • Use as guest
         </p>
       </div>
     </section>

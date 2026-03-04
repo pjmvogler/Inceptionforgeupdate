@@ -20,12 +20,12 @@ export function Footer() {
             <h3 className="font-semibold mb-4 text-sm uppercase tracking-wider text-gray-300">Products</h3>
             <ul className="space-y-3">
               <li>
-                <a href="#" className="text-sm text-gray-400 hover:text-orange-500 transition-colors">
-                  Log & Lock
+                <a href="https://stickynotez.com" target="_blank" rel="noopener noreferrer" className="text-sm text-gray-400 hover:text-yellow-500 transition-colors">
+                  Sticky Notez
                 </a>
               </li>
               <li>
-                <span className="text-sm text-gray-600">More coming soon</span>
+                <span className="text-sm text-gray-600">Log & Lock (coming soon)</span>
               </li>
             </ul>
           </div>

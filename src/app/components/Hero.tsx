@@ -1,5 +1,7 @@
-import { ArrowRight, Lock, Activity, Code, Play } from 'lucide-react';
+import { ArrowRight, Lock, Activity, Code, Play, StickyNote } from 'lucide-react';
 import { Button } from '@/app/components/ui/button';
+import stickyNotezLogo from '@/assets/stickynotez-logo.svg';
+import logAndLockLogo from '@/assets/logandlock-logo.svg';
 
 interface HeroProps {
   onExploreProducts?: () => void;
@@ -103,59 +105,51 @@ export function Hero({ onExploreProducts, onWatchDemo }: HeroProps) {
               </div>
 
               <div className="space-y-4">
-                {/* Log & Lock - Active */}
-                <div className="bg-gradient-to-br from-zinc-800/80 to-zinc-900/80 border-2 border-orange-600/30 rounded-xl p-5 hover:border-orange-600/50 transition-all group cursor-pointer">
+                {/* Sticky Notez - Active */}
+                <div className="bg-gradient-to-br from-zinc-800/80 to-zinc-900/80 border-2 border-yellow-500/30 rounded-xl p-5 hover:border-yellow-500/50 transition-all group cursor-pointer">
                   <div className="flex items-start gap-4">
-                    <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-orange-600 to-red-600 flex items-center justify-center flex-shrink-0 shadow-lg shadow-orange-600/20">
-                      <Lock className="text-white" size={20} />
+                    <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-yellow-400 to-amber-500 flex items-center justify-center flex-shrink-0 shadow-lg shadow-yellow-500/20">
+                      <StickyNote className="text-white" size={20} />
                     </div>
                     <div className="flex-1 min-w-0">
                       <div className="flex items-center gap-2 mb-1">
-                        <h4 className="text-2xl font-bold text-white">Log & Lock</h4>
-                        <span className="px-2 py-0.5 rounded bg-orange-600/20 border border-orange-600/30 text-[10px] font-bold text-orange-400">
+                        <img src={stickyNotezLogo} alt="Sticky Notez" className="h-6" />
+                        <span className="px-2 py-0.5 rounded bg-yellow-500/20 border border-yellow-500/30 text-[10px] font-bold text-yellow-400">
                           LIVE
                         </span>
                       </div>
                       <p className="text-xs text-gray-400 mb-3 leading-relaxed">
-                        Documentation & AI-powered reporting platform
+                        Beautiful sticky note app with cloud sync & voice input
                       </p>
                       <div className="flex gap-2">
-                        <a 
-                          href="https://logandlock.com"
+                        <a
+                          href="https://stickynotez.com"
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="text-xs px-3 py-1.5 rounded-md bg-orange-600/10 border border-orange-600/30 text-orange-400 hover:bg-orange-600/20 transition-colors inline-block"
+                          className="text-xs px-3 py-1.5 rounded-md bg-yellow-500/10 border border-yellow-500/30 text-yellow-400 hover:bg-yellow-500/20 transition-colors inline-block"
                         >
                           View Product
-                        </a>
-                        <a 
-                          href="https://medley-mix-83737672.figma.site"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="text-xs px-3 py-1.5 rounded-md border border-white/10 text-gray-400 hover:bg-white/5 transition-colors inline-block"
-                        >
-                          Demo
                         </a>
                       </div>
                     </div>
                   </div>
                 </div>
 
-                {/* Coming Soon - Product 2 */}
-                <div className="bg-zinc-950/50 border border-white/5 rounded-xl p-5 opacity-60">
+                {/* Log & Lock - Coming Soon */}
+                <div className="bg-zinc-950/50 border border-orange-600/10 rounded-xl p-5 opacity-60">
                   <div className="flex items-start gap-4">
-                    <div className="w-10 h-10 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center flex-shrink-0">
-                      <div className="w-5 h-5 rounded bg-white/10"></div>
+                    <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-orange-600/30 to-red-600/30 flex items-center justify-center flex-shrink-0">
+                      <Lock className="text-gray-400" size={20} />
                     </div>
                     <div className="flex-1">
                       <div className="flex items-center gap-2 mb-1">
-                        <div className="h-4 w-24 bg-white/5 rounded"></div>
+                        <img src={logAndLockLogo} alt="Log & Lock" className="h-4 opacity-50" />
                         <span className="px-2 py-0.5 rounded bg-white/5 border border-white/10 text-[10px] font-medium text-gray-600">
-                          Q2 2025
+                          COMING SOON
                         </span>
                       </div>
                       <p className="text-xs text-gray-600 leading-relaxed">
-                        Next tool in development
+                        Documentation & AI-powered reporting
                       </p>
                     </div>
                   </div>
@@ -171,11 +165,11 @@ export function Hero({ onExploreProducts, onWatchDemo }: HeroProps) {
                       <div className="flex items-center gap-2 mb-1">
                         <div className="h-4 w-24 bg-white/5 rounded"></div>
                         <span className="px-2 py-0.5 rounded bg-white/5 border border-white/10 text-[10px] font-medium text-gray-600">
-                          Q3 2025
+                          TBA
                         </span>
                       </div>
                       <p className="text-xs text-gray-600 leading-relaxed">
-                        Additional product planned
+                        More tools in development
                       </p>
                     </div>
                   </div>

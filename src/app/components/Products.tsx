@@ -1,5 +1,7 @@
-import { ArrowRight, Play, Lock } from 'lucide-react';
+import { ArrowRight, Play, Lock, StickyNote } from 'lucide-react';
 import { Button } from '@/app/components/ui/button';
+import stickyNotezLogo from '@/assets/stickynotez-logo.svg';
+import logAndLockLogo from '@/assets/logandlock-logo.svg';
 
 interface ProductsProps {
   onNavigate?: (page: 'home' | 'logandlock') => void;
@@ -29,63 +31,54 @@ export function Products({ onNavigate }: ProductsProps) {
 
         {/* Product Grid */}
         <div className="grid md:grid-cols-3 gap-8">
-          {/* Log & Lock - Active Product */}
-          <div className="bg-gradient-to-br from-zinc-900 to-zinc-950 border-2 border-orange-600/30 rounded-2xl p-8 relative overflow-hidden group hover:border-orange-600/50 transition-all shadow-lg shadow-orange-600/5">
-            {/* Flagship badge */}
+          {/* Sticky Notez - Active Product */}
+          <div className="bg-gradient-to-br from-zinc-900 to-zinc-950 border-2 border-yellow-500/30 rounded-2xl p-8 relative overflow-hidden group hover:border-yellow-500/50 transition-all shadow-lg shadow-yellow-500/5">
+            {/* New badge */}
             <div className="absolute top-4 right-4">
-              <div className="px-2 py-1 rounded-md bg-orange-600/20 border border-orange-600/30">
-                <span className="text-xs font-bold text-orange-400">FLAGSHIP</span>
+              <div className="px-2 py-1 rounded-md bg-yellow-500/20 border border-yellow-500/30">
+                <span className="text-xs font-bold text-yellow-400">NEW</span>
               </div>
             </div>
 
             <div className="mb-6">
-              <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-orange-600 to-red-600 flex items-center justify-center mb-4 shadow-lg shadow-orange-600/20">
-                <Lock className="text-white" size={24} />
+              <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-yellow-400 to-amber-500 flex items-center justify-center mb-4 shadow-lg shadow-yellow-500/20">
+                <StickyNote className="text-white" size={24} />
               </div>
-              <h3 className="text-4xl font-bold mb-4 text-white">Log & Lock</h3>
+              <img src={stickyNotezLogo} alt="Sticky Notez" className="h-9 mb-4" />
               <p className="text-gray-400 text-sm leading-relaxed mb-4">
-                Documentation and reporting platform. Capture notes, photos, voice memos, and files. Organize automatically. Generate professional reports with AI.
+                Beautiful, minimal sticky note app with cloud sync, drag & drop, voice input, and customizable themes. Organize your thoughts across all your devices.
               </p>
 
               {/* Tags */}
               <div className="flex flex-wrap gap-2 mb-6">
                 <span className="px-2 py-1 rounded-md bg-white/5 text-xs text-gray-300 border border-white/10">
-                  Documentation
+                  Notes
                 </span>
                 <span className="px-2 py-1 rounded-md bg-white/5 text-xs text-gray-300 border border-white/10">
-                  AI Reports
+                  Cloud Sync
                 </span>
                 <span className="px-2 py-1 rounded-md bg-white/5 text-xs text-gray-300 border border-white/10">
-                  Multimedia
+                  Voice Input
                 </span>
               </div>
             </div>
 
             {/* Buttons */}
             <div className="space-y-3">
-              <a 
-                href="https://logandlock.com"
+              <a
+                href="https://stickynotez.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-full h-12 bg-gradient-to-r from-orange-600 via-orange-600 to-red-600 hover:from-orange-700 hover:via-orange-700 hover:to-red-700 text-white group rounded-lg shadow-lg shadow-orange-600/20 flex items-center justify-center font-medium"
+                className="w-full h-12 bg-gradient-to-r from-yellow-500 via-yellow-500 to-amber-500 hover:from-yellow-600 hover:via-yellow-600 hover:to-amber-600 text-black font-medium group rounded-lg shadow-lg shadow-yellow-500/20 flex items-center justify-center"
               >
                 View Product
                 <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" size={16} />
               </a>
-              <a 
-                href="https://medley-mix-83737672.figma.site"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-full h-12 border border-orange-600/40 hover:bg-orange-600/10 hover:border-orange-600/70 text-orange-400 rounded-lg flex items-center justify-center font-medium"
-              >
-                <Play className="mr-2" size={16} />
-                Request Demo
-              </a>
             </div>
           </div>
 
-          {/* Coming Soon - Product 2 */}
-          <div className="bg-zinc-950 border border-white/5 rounded-2xl p-8 relative overflow-hidden opacity-50">
+          {/* Log & Lock - Coming Soon */}
+          <div className="bg-zinc-950 border border-orange-600/10 rounded-2xl p-8 relative overflow-hidden opacity-60">
             <div className="absolute top-4 right-4">
               <div className="px-2 py-1 rounded-md bg-white/5 border border-white/10">
                 <span className="text-xs font-medium text-gray-500">COMING SOON</span>
@@ -93,56 +86,26 @@ export function Products({ onNavigate }: ProductsProps) {
             </div>
 
             <div className="mb-6">
-              <div className="w-12 h-12 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center mb-4">
-                <div className="w-6 h-6 rounded bg-white/10"></div>
+              <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-orange-600/30 to-red-600/30 flex items-center justify-center mb-4">
+                <Lock className="text-gray-400" size={24} />
               </div>
-              <h3 className="text-2xl font-bold mb-2 text-gray-400">In Development</h3>
+              <img src={logAndLockLogo} alt="Log & Lock" className="h-7 mb-2 opacity-50" />
               <p className="text-gray-600 text-sm leading-relaxed mb-4">
-                Next product in the pipeline. Details coming soon.
+                Documentation and reporting platform. Capture notes, photos, voice memos, and files. Organize automatically. Generate professional reports with AI.
               </p>
 
               {/* Tags */}
               <div className="flex flex-wrap gap-2 mb-6">
                 <span className="px-2 py-1 rounded-md bg-white/5 text-xs text-gray-600 border border-white/5">
-                  TBA
+                  Documentation
                 </span>
-              </div>
-            </div>
-
-            <Button 
-              disabled
-              className="w-full h-12 bg-white/5 text-gray-600 cursor-not-allowed rounded-lg"
-            >
-              Coming Soon
-            </Button>
-          </div>
-
-          {/* Coming Soon - Product 3 */}
-          <div className="bg-zinc-950 border border-white/5 rounded-2xl p-8 relative overflow-hidden opacity-50">
-            <div className="absolute top-4 right-4">
-              <div className="px-2 py-1 rounded-md bg-white/5 border border-white/10">
-                <span className="text-xs font-medium text-gray-500">COMING SOON</span>
-              </div>
-            </div>
-
-            <div className="mb-6">
-              <div className="w-12 h-12 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center mb-4">
-                <div className="w-6 h-6 rounded bg-white/10"></div>
-              </div>
-              <h3 className="text-2xl font-bold mb-2 text-gray-400">In Development</h3>
-              <p className="text-gray-600 text-sm leading-relaxed mb-4">
-                Another AI-powered solution. More information to follow.
-              </p>
-
-              {/* Tags */}
-              <div className="flex flex-wrap gap-2 mb-6">
                 <span className="px-2 py-1 rounded-md bg-white/5 text-xs text-gray-600 border border-white/5">
-                  TBA
+                  AI Reports
                 </span>
               </div>
             </div>
 
-            <Button 
+            <Button
               disabled
               className="w-full h-12 bg-white/5 text-gray-600 cursor-not-allowed rounded-lg"
             >
