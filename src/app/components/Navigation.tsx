@@ -95,10 +95,10 @@ export function Navigation({ onNavigate, currentPage = 'home' }: NavigationProps
             </button>
           </div>
 
-          {/* Right: Single CTA */}
-          <button 
+          {/* Right: Single CTA - hidden on mobile */}
+          <button
             onClick={handleExploreProducts}
-            className="h-9 px-4 md:h-11 md:px-6 rounded-lg bg-gradient-to-r from-orange-600 via-orange-600 to-red-600 hover:from-orange-700 hover:via-orange-700 hover:to-red-700 text-white text-xs md:text-sm font-medium transition-all duration-300 flex items-center justify-center gap-1.5 md:gap-2 group shadow-lg shadow-orange-600/20"
+            className="hidden md:flex h-11 px-6 rounded-lg bg-gradient-to-r from-orange-600 via-orange-600 to-red-600 hover:from-orange-700 hover:via-orange-700 hover:to-red-700 text-white text-sm font-medium transition-all duration-300 items-center justify-center gap-2 group shadow-lg shadow-orange-600/20"
           >
             <span>Explore Products</span>
             <ArrowRight className="w-4 h-4 group-hover:translate-x-0.5 transition-transform duration-300" />
