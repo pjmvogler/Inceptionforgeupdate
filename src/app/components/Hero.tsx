@@ -95,9 +95,8 @@ export function Hero({ onExploreProducts }: HeroProps) {
           {/* Right Column: Product Slate Card */}
           <div className="relative">
             <div className="bg-gradient-to-br from-zinc-900/80 to-zinc-950/90 border border-white/10 rounded-2xl p-8 shadow-xl backdrop-blur-sm">
-              <div className="flex items-center justify-between mb-6">
+              <div className="mb-6">
                 <h3 className="text-xl font-bold text-gray-200">Product Slate</h3>
-                <span className="text-xs text-gray-500 uppercase tracking-wider">2024–2025</span>
               </div>
 
               <div className="space-y-4">
@@ -170,12 +169,6 @@ export function Hero({ onExploreProducts }: HeroProps) {
                     </div>
                   </div>
                 </div>
-              </div>
-
-              <div className="mt-6 pt-6 border-t border-white/5">
-                <p className="text-xs text-gray-500 text-center">
-                  More tools shipping throughout 2025
-                </p>
               </div>
             </div>
           </div>
