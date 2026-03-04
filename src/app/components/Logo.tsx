@@ -4,7 +4,7 @@ import logoImage from '@/assets/4ce70965a299d887c6cc6e8ae77b9b0e9edc7c68.png';
 
 export function Logo({ className }: { className?: string }) {
   return (
-    <div className={`flex items-center ${className ?? 'h-[50px]'}`.trim()}>
+    <div className={`flex items-center ${className ?? 'h-[79px]'}`.trim()}>
       <img
         src={logoImage}
         alt="Inception Forge"
