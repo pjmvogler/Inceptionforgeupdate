@@ -46,7 +46,7 @@ export function CTA() {
         </a>
 
         <p className="text-sm text-gray-500 mt-6">
-          No account required • Use as guest
+          7-day free trial • No credit card required
         </p>
       </div>
     </section>

@@ -137,8 +137,8 @@ export function About() {
               </div>
             </div>
 
-            <div className="bg-zinc-950/50 border border-orange-600/10 rounded-xl p-8 opacity-60">
-              <img src={logAndLockLogo} alt="Log & Lock" className="h-6 mb-2 opacity-50" />
+            <div className="bg-zinc-950/50 border border-orange-600/10 rounded-xl p-8 opacity-75 hover:opacity-90 hover:border-orange-600/25 transition-all duration-300">
+              <img src={logAndLockLogo} alt="Log & Lock" className="h-6 mb-2 opacity-70" />
               <p className="text-sm text-gray-500">
                 Documentation & AI-powered reporting platform. Coming soon.
               </p>

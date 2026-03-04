@@ -78,7 +78,7 @@ export function Products({ onNavigate }: ProductsProps) {
           </div>
 
           {/* Log & Lock - Coming Soon */}
-          <div className="bg-zinc-950 border border-orange-600/10 rounded-2xl p-8 relative overflow-hidden opacity-60">
+          <div className="bg-zinc-950 border border-orange-600/10 rounded-2xl p-8 relative overflow-hidden opacity-75 hover:opacity-90 hover:border-orange-600/25 transition-all duration-300">
             <div className="absolute top-4 right-4">
               <div className="px-2 py-1 rounded-md bg-white/5 border border-white/10">
                 <span className="text-xs font-medium text-gray-500">COMING SOON</span>
@@ -89,7 +89,7 @@ export function Products({ onNavigate }: ProductsProps) {
               <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-orange-600/30 to-red-600/30 flex items-center justify-center mb-4">
                 <Lock className="text-gray-400" size={24} />
               </div>
-              <img src={logAndLockLogo} alt="Log & Lock" className="h-7 mb-2 opacity-50" />
+              <img src={logAndLockLogo} alt="Log & Lock" className="h-7 mb-2 opacity-70" />
               <p className="text-gray-600 text-sm leading-relaxed mb-4">
                 Documentation and reporting platform. Capture notes, photos, voice memos, and files. Organize automatically. Generate professional reports with AI.
               </p>
