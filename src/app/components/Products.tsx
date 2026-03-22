@@ -100,7 +100,7 @@ export function Products({ onNavigate }: ProductsProps) {
                 <span className="text-green-400">Holster</span>
               </h3>
               <p className="text-gray-400 text-sm leading-relaxed mb-4">
-                A slim desktop sidecar panel for Windows. Keep your tasks, folders, screenshots, and notes within reach — without breaking your flow. 100% offline, no account needed.
+                A slim desktop sidecar panel for Windows. Keep your tasks, folders, screenshots, and notes within reach without breaking your flow. 100% offline, no account needed.
               </p>
 
               {/* Tags */}
