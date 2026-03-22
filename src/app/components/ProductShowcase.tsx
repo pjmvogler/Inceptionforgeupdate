@@ -1,16 +1,26 @@
 import { Card } from '@/app/components/ui/card';
 import { Badge } from '@/app/components/ui/badge';
 import { Button } from '@/app/components/ui/button';
-import { Lock, FileText, Calendar, MessageSquare, TrendingUp, Database, ArrowRight } from 'lucide-react';
+import { Lock, FileText, Calendar, MessageSquare, TrendingUp, Database, ArrowRight, Folder } from 'lucide-react';
 
 const products = [
+  {
+    icon: Folder,
+    name: 'FileHolster',
+    useLogo: false,
+    tagline: 'Slim Desktop Sidecar for Windows',
+    description: 'A slim panel that sits on the right side of your screen. Keep tasks, folders, screenshots, and notes within reach — without breaking your flow.',
+    status: 'Available Now',
+    color: 'from-green-500 to-emerald-600',
+    link: 'https://fileholster.com'
+  },
   {
     icon: Lock,
     name: 'Log & Lock',
     useLogo: false,
     tagline: 'Secure Logging Platform',
     description: 'AI-powered data logging with military-grade security. Track, organize, and protect everything that matters.',
-    status: 'Available Now',
+    status: 'Coming Soon',
     color: 'from-orange-600 to-red-600'
   },
   {
@@ -112,13 +122,25 @@ export function ProductShowcase() {
                 <p className="text-orange-500 text-sm mb-3">{product.tagline}</p>
                 <p className="text-gray-400 leading-relaxed mb-6">{product.description}</p>
                 
-                <Button 
-                  variant="ghost" 
-                  className="w-full text-orange-500 hover:text-orange-400 hover:bg-orange-900/20 group/btn"
-                >
-                  Learn More
-                  <ArrowRight className="ml-2 w-4 h-4 group-hover/btn:translate-x-1 transition-transform" />
-                </Button>
+                {product.link ? (
+                  <a
+                    href={product.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-full flex items-center justify-center text-green-400 hover:text-green-300 hover:bg-green-900/20 group/btn rounded-md py-2 transition-colors"
+                  >
+                    View Product
+                    <ArrowRight className="ml-2 w-4 h-4 group-hover/btn:translate-x-1 transition-transform" />
+                  </a>
+                ) : (
+                  <Button
+                    variant="ghost"
+                    className="w-full text-orange-500 hover:text-orange-400 hover:bg-orange-900/20 group/btn"
+                  >
+                    Learn More
+                    <ArrowRight className="ml-2 w-4 h-4 group-hover/btn:translate-x-1 transition-transform" />
+                  </Button>
+                )}
               </div>
             </Card>
           ))}
