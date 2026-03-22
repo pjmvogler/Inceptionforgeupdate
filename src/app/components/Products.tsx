@@ -79,6 +79,58 @@ export function Products({ onNavigate }: ProductsProps) {
             </div>
           </div>
 
+          {/* FileHolster - Active Product */}
+          <div className="bg-gradient-to-br from-zinc-900 to-zinc-950 border-2 border-green-500/30 rounded-2xl p-6 md:p-8 relative overflow-hidden group hover:border-green-500/50 transition-all shadow-lg shadow-green-500/5">
+            {/* New badge */}
+            <div className="absolute top-4 right-4">
+              <div className="px-2 py-1 rounded-md bg-green-500/20 border border-green-500/30">
+                <span className="text-xs font-bold text-green-400">NEW</span>
+              </div>
+            </div>
+
+            <div className="mb-6">
+              <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-green-500 to-emerald-600 flex items-center justify-center mb-4 shadow-lg shadow-green-500/20">
+                <svg className="w-6 h-6 text-black" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M13 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z" />
+                  <polyline points="13 2 13 9 20 9" />
+                </svg>
+              </div>
+              <h3 className="text-2xl font-bold mb-1">
+                <span className="text-white">File</span>
+                <span className="text-green-400">Holster</span>
+              </h3>
+              <p className="text-gray-400 text-sm leading-relaxed mb-4">
+                A slim desktop sidecar panel for Windows. Keep your tasks, folders, screenshots, and notes within reach — without breaking your flow. 100% offline, no account needed.
+              </p>
+
+              {/* Tags */}
+              <div className="flex flex-wrap gap-2 mb-6">
+                <span className="px-2 py-1 rounded-md bg-white/5 text-xs text-gray-300 border border-white/10">
+                  Desktop Tool
+                </span>
+                <span className="px-2 py-1 rounded-md bg-white/5 text-xs text-gray-300 border border-white/10">
+                  Productivity
+                </span>
+                <span className="px-2 py-1 rounded-md bg-white/5 text-xs text-gray-300 border border-white/10">
+                  Windows
+                </span>
+              </div>
+            </div>
+
+            {/* Buttons */}
+            <div className="space-y-3">
+              <a
+                href="https://fileholster.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-full h-12 bg-gradient-to-r from-green-500 via-green-500 to-emerald-500 hover:from-green-600 hover:via-green-600 hover:to-emerald-600 text-black font-medium group rounded-lg shadow-lg shadow-green-500/20 flex items-center justify-center"
+              >
+                View Product
+                <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" size={16} />
+              </a>
+            </div>
+          </div>
+
           {/* Log & Lock - Coming Soon */}
           <div className="bg-zinc-950 border border-orange-600/10 rounded-2xl p-6 md:p-8 relative overflow-hidden opacity-75 hover:opacity-90 hover:border-orange-600/25 transition-all duration-300">
             <div className="absolute top-4 right-4">
