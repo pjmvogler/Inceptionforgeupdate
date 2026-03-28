@@ -4,6 +4,7 @@ import stickyNotezLogo from '@/assets/stickynotez-logo.svg';
 import stickyNotezIcon from '@/assets/stickynotez-icon.svg';
 import logAndLockLogo from '@/assets/logandlock-logo.svg';
 import logAndLockIcon from '@/assets/logandlock-icon.svg';
+import fileHolsterIcon from '@/assets/fileholster-icon.png';
 
 interface ProductsProps {
   onNavigate?: (page: string) => void;
@@ -80,24 +81,21 @@ export function Products({ onNavigate }: ProductsProps) {
           </div>
 
           {/* FileHolster - Active Product */}
-          <div className="bg-gradient-to-br from-zinc-900 to-zinc-950 border-2 border-green-500/30 rounded-2xl p-6 md:p-8 relative overflow-hidden group hover:border-green-500/50 transition-all shadow-lg shadow-green-500/5">
+          <div className="bg-gradient-to-br from-zinc-900 to-zinc-950 border-2 rounded-2xl p-6 md:p-8 relative overflow-hidden group transition-all shadow-lg" style={{ borderColor: 'rgba(51,255,0,0.25)', boxShadow: '0 4px 24px 0 rgba(51,255,0,0.05)' }} onMouseEnter={e => (e.currentTarget.style.borderColor = 'rgba(51,255,0,0.5)')} onMouseLeave={e => (e.currentTarget.style.borderColor = 'rgba(51,255,0,0.25)')}>
             {/* New badge */}
             <div className="absolute top-4 right-4">
-              <div className="px-2 py-1 rounded-md bg-green-500/20 border border-green-500/30">
-                <span className="text-xs font-bold text-green-400">NEW</span>
+              <div className="px-2 py-1 rounded-md" style={{ background: 'rgba(51,255,0,0.15)', border: '1px solid rgba(51,255,0,0.3)' }}>
+                <span className="text-xs font-bold" style={{ color: '#33ff00' }}>NEW</span>
               </div>
             </div>
 
             <div className="mb-6">
-              <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-green-500 to-emerald-600 flex items-center justify-center mb-4 shadow-lg shadow-green-500/20">
-                <svg className="w-6 h-6 text-black" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-                  <path d="M13 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z" />
-                  <polyline points="13 2 13 9 20 9" />
-                </svg>
+              <div className="w-12 h-12 rounded-xl flex items-center justify-center mb-4" style={{ background: 'transparent' }}>
+                <img src={fileHolsterIcon} alt="FileHolster" className="w-12 h-12" />
               </div>
               <h3 className="text-2xl font-bold mb-1">
                 <span className="text-white">File</span>
-                <span className="text-green-400">Holster</span>
+                <span style={{ color: '#33ff00' }}>Holster</span>
               </h3>
               <p className="text-gray-400 text-sm leading-relaxed mb-4">
                 A slim desktop sidecar panel for Windows. Keep your tasks, folders, screenshots, and notes within reach without breaking your flow. 100% offline, no account needed.
@@ -123,7 +121,8 @@ export function Products({ onNavigate }: ProductsProps) {
                 href="https://fileholster.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-full h-12 bg-gradient-to-r from-green-500 via-green-500 to-emerald-500 hover:from-green-600 hover:via-green-600 hover:to-emerald-600 text-black font-medium group rounded-lg shadow-lg shadow-green-500/20 flex items-center justify-center"
+                className="w-full h-12 text-black font-medium group rounded-lg flex items-center justify-center transition-opacity hover:opacity-90"
+                style={{ background: 'linear-gradient(to right, #33ff00, #22cc00)', boxShadow: '0 4px 16px 0 rgba(51,255,0,0.2)' }}
               >
                 View Product
                 <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" size={16} />

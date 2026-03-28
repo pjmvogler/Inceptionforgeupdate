@@ -1,17 +1,19 @@
 import { Card } from '@/app/components/ui/card';
 import { Badge } from '@/app/components/ui/badge';
 import { Button } from '@/app/components/ui/button';
-import { Lock, FileText, Calendar, MessageSquare, TrendingUp, Database, ArrowRight, Folder } from 'lucide-react';
+import { Lock, FileText, Calendar, MessageSquare, TrendingUp, Database, ArrowRight } from 'lucide-react';
+import fileHolsterIcon from '@/assets/fileholster-icon.png';
 
 const products = [
   {
-    icon: Folder,
+    icon: null,
     name: 'FileHolster',
     useLogo: false,
+    useAppIcon: true,
     tagline: 'Slim Desktop Sidecar for Windows',
     description: 'A slim panel that sits on the right side of your screen. Keep tasks, folders, screenshots, and notes within reach — without breaking your flow.',
     status: 'Available Now',
-    color: 'from-green-500 to-emerald-600',
+    color: '',
     link: 'https://fileholster.com'
   },
   {
@@ -85,49 +87,75 @@ export function ProductShowcase() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {products.map((product, index) => (
+          {products.map((product, index) => {
+            const isFileHolster = product.useAppIcon;
+            return (
             <Card
               key={index}
-              className="bg-gradient-to-br from-gray-900 to-black border-orange-900/30 hover:border-orange-600/50 transition-all group overflow-hidden"
+              className="bg-gradient-to-br from-gray-900 to-black transition-all group overflow-hidden"
+              style={isFileHolster ? { borderColor: 'rgba(51,255,0,0.25)' } : { borderColor: 'rgba(124,45,18,0.3)' }}
+              onMouseEnter={isFileHolster ? (e => (e.currentTarget.style.borderColor = 'rgba(51,255,0,0.5)')) : undefined}
+              onMouseLeave={isFileHolster ? (e => (e.currentTarget.style.borderColor = 'rgba(51,255,0,0.25)')) : undefined}
             >
               <div className="p-6">
-                <div className={`w-14 h-14 bg-gradient-to-br ${product.color} rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform`}>
-                  <product.icon className="w-7 h-7 text-white" />
-                </div>
-                
-                <Badge className="mb-3 bg-orange-900/30 text-orange-400 border-orange-700 hover:bg-orange-900/40">
-                  {product.status}
-                </Badge>
-                
+                {isFileHolster ? (
+                  <div className="w-14 h-14 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                    <img src={fileHolsterIcon} alt="FileHolster" className="w-14 h-14" />
+                  </div>
+                ) : (
+                  <div className={`w-14 h-14 bg-gradient-to-br ${product.color} rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform`}>
+                    {product.icon && <product.icon className="w-7 h-7 text-white" />}
+                  </div>
+                )}
+
+                {isFileHolster ? (
+                  <Badge
+                    className="mb-3"
+                    style={{ background: 'rgba(51,255,0,0.15)', color: '#33ff00', borderColor: 'rgba(51,255,0,0.4)' }}
+                  >
+                    {product.status}
+                  </Badge>
+                ) : (
+                  <Badge className="mb-3 bg-orange-900/30 text-orange-400 border-orange-700 hover:bg-orange-900/40">
+                    {product.status}
+                  </Badge>
+                )}
+
                 {product.useLogo ? (
-                  <div style={{ 
+                  <div style={{
                     display: 'flex',
                     alignItems: 'center',
                     height: '160px',
                     marginBottom: '8px'
                   }}>
-                    <img 
-                      src={logAndLockLogo} 
-                      alt={product.name} 
-                      style={{ 
+                    <img
+                      src={logAndLockLogo}
+                      alt={product.name}
+                      style={{
                         filter: 'brightness(0) invert(1)',
                         height: '100%',
                         width: 'auto',
                       }}
                     />
                   </div>
+                ) : isFileHolster ? (
+                  <h3 className="text-2xl font-bold mb-2">
+                    <span className="text-white">File</span>
+                    <span style={{ color: '#33ff00' }}>Holster</span>
+                  </h3>
                 ) : (
                   <h3 className="text-2xl text-white mb-2">{product.name}</h3>
                 )}
-                <p className="text-orange-500 text-sm mb-3">{product.tagline}</p>
+                <p className="text-sm mb-3" style={isFileHolster ? { color: '#33ff00', opacity: 0.8 } : { color: 'rgb(249,115,22)' }}>{product.tagline}</p>
                 <p className="text-gray-400 leading-relaxed mb-6">{product.description}</p>
-                
+
                 {product.link ? (
                   <a
                     href={product.link}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="w-full flex items-center justify-center text-green-400 hover:text-green-300 hover:bg-green-900/20 group/btn rounded-md py-2 transition-colors"
+                    className="w-full flex items-center justify-center font-medium group/btn rounded-md py-2 transition-opacity hover:opacity-90"
+                    style={{ background: 'linear-gradient(to right, #33ff00, #22cc00)', color: '#000' }}
                   >
                     View Product
                     <ArrowRight className="ml-2 w-4 h-4 group-hover/btn:translate-x-1 transition-transform" />
@@ -143,7 +171,8 @@ export function ProductShowcase() {
                 )}
               </div>
             </Card>
-          ))}
+          );
+          })}
         </div>
       </div>
     </section>
