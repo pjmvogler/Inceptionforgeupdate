@@ -77,7 +77,7 @@ export function Hero({ onExploreProducts }: HeroProps) {
             </h1>
             
             <p className="text-lg md:text-xl lg:text-2xl text-gray-100 mb-4 leading-[1.45]">
-              A studio building intelligent SaaS tools that transform how professionals work across every industry.
+              A studio building intelligent software that transforms how professionals work across every industry.
             </p>
             
             <p className="text-sm md:text-base text-gray-300 mb-8 md:mb-10 leading-[1.75] max-w-lg">
@@ -162,22 +162,32 @@ export function Hero({ onExploreProducts }: HeroProps) {
                   </div>
                 </div>
 
-                {/* Log & Lock - Coming Soon */}
-                <div className="bg-zinc-950/50 border border-orange-600/10 rounded-xl p-5 opacity-75 hover:opacity-90 hover:border-orange-600/25 transition-all duration-300">
+                {/* Log & Lock - Beta */}
+                <div className="bg-gradient-to-br from-zinc-800/80 to-zinc-900/80 border-2 border-purple-500/30 rounded-xl p-5 hover:border-purple-500/50 transition-all group cursor-pointer">
                   <div className="flex items-start gap-4">
-                    <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-purple-600/40 to-violet-600/40 flex items-center justify-center flex-shrink-0">
+                    <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-purple-600/60 to-violet-600/60 flex items-center justify-center flex-shrink-0 shadow-lg shadow-purple-500/20">
                       <img src={logAndLockIcon} alt="" className="w-7 h-7" />
                     </div>
-                    <div className="flex-1">
+                    <div className="flex-1 min-w-0">
                       <div className="flex items-center gap-2 mb-1">
-                        <img src={logAndLockLogo} alt="Log & Lock" className="h-4 opacity-70" />
-                        <span className="px-2 py-0.5 rounded bg-white/5 border border-white/10 text-[10px] font-medium text-gray-600">
-                          COMING SOON
+                        <img src={logAndLockLogo} alt="Log & Lock" className="h-4" />
+                        <span className="px-2 py-0.5 rounded bg-purple-500/20 border border-purple-500/30 text-[10px] font-bold text-purple-400">
+                          BETA TESTING
                         </span>
                       </div>
-                      <p className="text-xs text-gray-600 leading-relaxed">
+                      <p className="text-xs text-gray-400 mb-3 leading-relaxed">
                         Documentation & AI-powered reporting
                       </p>
+                      <div className="flex gap-2">
+                        <a
+                          href="https://logandlock.com"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-xs px-3 py-1.5 rounded-md bg-purple-500/10 border border-purple-500/30 text-purple-400 hover:bg-purple-500/20 transition-colors inline-block"
+                        >
+                          View Product
+                        </a>
+                      </div>
                     </div>
                   </div>
                 </div>
