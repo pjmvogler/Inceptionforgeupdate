@@ -4,6 +4,7 @@ import stickyNotezLogo from '@/assets/stickynotez-logo.svg';
 import stickyNotezIcon from '@/assets/stickynotez-icon.svg';
 import logAndLockLogo from '@/assets/logandlock-logo.svg';
 import logAndLockIcon from '@/assets/logandlock-icon.svg';
+import fileHolsterIcon from '@/assets/fileholster-icon.png';
 
 interface HeroProps {
   onExploreProducts?: () => void;
@@ -122,6 +123,37 @@ export function Hero({ onExploreProducts }: HeroProps) {
                           target="_blank"
                           rel="noopener noreferrer"
                           className="text-xs px-3 py-1.5 rounded-md bg-yellow-500/10 border border-yellow-500/30 text-yellow-400 hover:bg-yellow-500/20 transition-colors inline-block"
+                        >
+                          View Product
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                {/* FileHolster - Active */}
+                <div className="bg-gradient-to-br from-zinc-800/80 to-zinc-900/80 border-2 rounded-xl p-5 transition-all group cursor-pointer" style={{ borderColor: 'rgba(51,255,0,0.3)' }} onMouseEnter={e => (e.currentTarget.style.borderColor = 'rgba(51,255,0,0.55)')} onMouseLeave={e => (e.currentTarget.style.borderColor = 'rgba(51,255,0,0.3)')}>
+                  <div className="flex items-start gap-4">
+                    <div className="w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0">
+                      <img src={fileHolsterIcon} alt="FileHolster" className="w-10 h-10" />
+                    </div>
+                    <div className="flex-1 min-w-0">
+                      <div className="flex items-center gap-2 mb-1">
+                        <span className="font-bold text-white text-sm">File<span style={{ color: '#33ff00' }}>Holster</span></span>
+                        <span className="px-2 py-0.5 rounded border text-[10px] font-bold" style={{ background: 'rgba(51,255,0,0.15)', borderColor: 'rgba(51,255,0,0.35)', color: '#33ff00' }}>
+                          LIVE
+                        </span>
+                      </div>
+                      <p className="text-xs text-gray-400 mb-3 leading-relaxed">
+                        Slim desktop sidecar for Windows — tasks, folders & notes within reach
+                      </p>
+                      <div className="flex gap-2">
+                        <a
+                          href="https://fileholster.com"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-xs px-3 py-1.5 rounded-md border transition-colors inline-block"
+                          style={{ background: 'rgba(51,255,0,0.1)', borderColor: 'rgba(51,255,0,0.3)', color: '#33ff00' }}
                         >
                           View Product
                         </a>
