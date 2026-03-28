@@ -131,39 +131,42 @@ export function Products({ onNavigate }: ProductsProps) {
           </div>
 
           {/* Log & Lock - Coming Soon */}
-          <div className="bg-zinc-950 border border-orange-600/10 rounded-2xl p-6 md:p-8 relative overflow-hidden opacity-75 hover:opacity-90 hover:border-orange-600/25 transition-all duration-300">
+          <div className="bg-gradient-to-br from-zinc-900 to-zinc-950 border-2 border-purple-500/30 rounded-2xl p-6 md:p-8 relative overflow-hidden group hover:border-purple-500/50 transition-all shadow-lg shadow-purple-500/5">
             <div className="absolute top-4 right-4">
-              <div className="px-2 py-1 rounded-md bg-white/5 border border-white/10">
-                <span className="text-xs font-medium text-gray-500">COMING SOON</span>
+              <div className="px-2 py-1 rounded-md bg-purple-500/20 border border-purple-500/30">
+                <span className="text-xs font-bold text-purple-400">BETA</span>
               </div>
             </div>
 
             <div className="mb-6">
-              <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-purple-600/40 to-violet-600/40 flex items-center justify-center mb-4">
+              <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-purple-600/60 to-violet-600/60 flex items-center justify-center mb-4 shadow-lg shadow-purple-500/20">
                 <img src={logAndLockIcon} alt="" className="w-8 h-8" />
               </div>
-              <img src={logAndLockLogo} alt="Log & Lock" className="h-7 mb-2 opacity-70" />
-              <p className="text-gray-600 text-sm leading-relaxed mb-4">
+              <img src={logAndLockLogo} alt="Log & Lock" className="h-7 mb-2" />
+              <p className="text-gray-400 text-sm leading-relaxed mb-4">
                 Documentation and reporting platform. Capture notes, photos, voice memos, and files. Organize automatically. Generate professional reports with AI.
               </p>
 
               {/* Tags */}
               <div className="flex flex-wrap gap-2 mb-6">
-                <span className="px-2 py-1 rounded-md bg-white/5 text-xs text-gray-600 border border-white/5">
+                <span className="px-2 py-1 rounded-md bg-white/5 text-xs text-gray-300 border border-white/10">
                   Documentation
                 </span>
-                <span className="px-2 py-1 rounded-md bg-white/5 text-xs text-gray-600 border border-white/5">
+                <span className="px-2 py-1 rounded-md bg-white/5 text-xs text-gray-300 border border-white/10">
                   AI Reports
                 </span>
               </div>
             </div>
 
-            <Button
-              disabled
-              className="w-full h-12 bg-white/5 text-gray-600 cursor-not-allowed rounded-lg"
+            <a
+              href="https://logandlock.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-full h-12 bg-gradient-to-r from-purple-600 via-purple-600 to-violet-600 hover:from-purple-700 hover:via-purple-700 hover:to-violet-700 text-white font-medium group rounded-lg shadow-lg shadow-purple-500/20 flex items-center justify-center"
             >
-              Coming Soon
-            </Button>
+              View Product
+              <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" size={16} />
+            </a>
           </div>
         </div>
       </div>
