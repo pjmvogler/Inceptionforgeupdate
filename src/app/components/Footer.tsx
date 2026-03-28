@@ -36,6 +36,11 @@ export function Footer({ onNavigate }: FooterProps) {
                 </a>
               </li>
               <li>
+                <a href="https://fileholster.com" target="_blank" rel="noopener noreferrer" className="text-sm text-gray-400 hover:text-white transition-colors" style={{ ['--tw-text-opacity' as string]: '1' }} onMouseEnter={e => (e.currentTarget.style.color = '#33ff00')} onMouseLeave={e => (e.currentTarget.style.color = '')}>
+                  FileHolster
+                </a>
+              </li>
+              <li>
                 <span className="text-sm text-gray-600">Log & Lock (coming soon)</span>
               </li>
             </ul>
