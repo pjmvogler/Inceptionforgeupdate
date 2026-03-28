@@ -41,7 +41,9 @@ export function Footer({ onNavigate }: FooterProps) {
                 </a>
               </li>
               <li>
-                <span className="text-sm text-gray-600">Log & Lock (coming soon)</span>
+                <a href="https://logandlock.com" target="_blank" rel="noopener noreferrer" className="text-sm text-gray-400 hover:text-purple-400 transition-colors">
+                  Log & Lock
+                </a>
               </li>
             </ul>
           </div>
